@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link href="data:image/x-icon;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAJwCFACfIViRrAAAACXBI
+WXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QEZCgkPPu+3+gAAAcxJREFUOMuVk81uElEYhp+ZOW0J
+drA4JJqWGqMx/TNNUwW9A9MNXkPjphfgxmXTtQt3RKX34MobcGGoNYZAsSso6AIyM5TBwhSHOS6A
+CfiD+G3es/i+9zzvl3MUgN2nu89nZmcOFFXVmKKk73s9r/cs8zrzUgA439sH21ubWuyaMc08pm2J
+T59zL4C+gWnZWrvTobmTAeQ/xhXabx5jWrYGIAAa502qlSobc1ush3fG2k/ftll5Eg70pP2OfKVK
+47w5sAM2HyTlreUlmo4zVYSrkQjl6jdyH7OKAFi8bvAouY3rulMZhEIhul2XHKAC6PNhfN9n/0ac
+/fcfAk2lUty5e5ulxTitlkOjeUGuUMT3ffT5MMEOAKSUkE6D4wR6dHxE99KlXDrDtCxaFy6eJ/u9
+gxKjaMeHrygU82ys3aNQzJMY6OrsFb6cnrAQ1ah+rYzFGSMY3virTiJQRw0S9xMsRKO/6erKOjHD
+YDl+EyGUP0eYRFAqVajV6nQuf/wfgSo1yqWzoHkSgZRSKn/LHjMMhOgvcIRABgaaKrK2bT+UUqIo
+SuCu6xF0PRKch6S2baOpIhsY9Dx/zzTtdK1eTw6f96TfrKki2/P8PYCff1AeLTgSSIQAAAAASUVO
+RK5CYII=
+" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="calc.css" />
+<script src="calculator.js" type="text/javascript"></script>
+<script src="keybindings.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="floater"></div>
+	<div id="calculator" class="clearfix">
+	<header>
+		<p>Calculator</p>
+		<div id="solar" onclick="toggle()">
+			<ul><li></li><li></li><li></li><li></li></ul>
+		</div>
+		<div id="displaypanel">
+			<div id="display"></div>
+		</div>
+	</header>
+	<div class="buttons">
+		<fieldset id="numbers">
+			<button class="number" id="backspace" onclick="calculate('backspace')">&larr;</button>
+			<button class="number red" id="clearEntry" onclick="calculate('clearEntry')">CE</button>
+			<button class="number red" id="clear" onclick="calculate('clear')">C</button>
+				
+			<button class="number" id="7" onclick="calculate('7')">7</button>
+			<button class="number" id="8" onclick="calculate('8')">8</button>
+			<button class="number" id="9" onclick="calculate('9')">9</button>
+			<button class="number" id="4" onclick="calculate('4')">4</button>
+			<button class="number" id="5" onclick="calculate('5')">5</button>
+			<button class="number" id="6" onclick="calculate('6')">6</button>
+			<button class="number" id="1" onclick="calculate('1')">1</button>
+			<button class="number" id="2" onclick="calculate('2')">2</button>
+			<button class="number" id="3" onclick="calculate('3')">3</button>
+			<button class="number dw" id="0" onclick="calculate('0')">0</button>
+			<button class="number" id="." onclick="calculate('.')">.</button>
+		</fieldset>
+
+		<fieldset id="commands">
+			<button class="command grey" id="pi" onclick="calculate('pi')">pi</button>
+			<button class="command grey" id="e" onclick="calculate('e')">e</button>
+			<button class="command grey" id="pow" onclick="calculate('pow')">x&#8319;</button>
+			<button class="command grey" id="sqrt" onclick="calculate('sqrt')">&radic;</button>
+			<button class="command grey" id="plusminus" onclick="calculate('plusminus')">&plusmn;</button>
+		</fieldset>
+
+		<fieldset id="commands">
+			<button class="command" id="+" onclick="calculate('+')">+</button>
+			<button class="command" id="-" onclick="calculate('-')">-</button>
+			<button class="command" id="*" onclick="calculate('*')">&times;</button>
+			<button class="command" id="/" onclick="calculate('/')">&divide;</button>
+			<button class="command" id="=" onclick="calculate('=')">=</button>
+		</fieldset>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+// Source: http://www.javascriptkit.com/jsref/eventkeyboardmouse.shtml
+onkeypress=function(e) {
+	var e = window.event || e;
+	var keyunicode = e.charCode || e.keyCode;
+	keyboard(keyunicode);
+}
+</script>
+
+</body>
+</html>
