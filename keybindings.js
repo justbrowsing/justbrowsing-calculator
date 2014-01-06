@@ -34,3 +34,12 @@ function keyboard(keyunicode) {
 		toggle();
 	}
 }
+
+function keypress(keyup) {
+	if (keyup == "8") {
+		calculate('backspace');
+	}
+	else if (keyup == "27") {
+		calculate('clear');
+	}
+}

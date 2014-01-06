@@ -1,7 +1,6 @@
 @font-face {
-	font-family: 'DSDIGI';
-	src: url('DSDIGI.eot');
-	src: local('DSDIGI'), url('DSDIGI.ttf') format('truetype');
+	font-family: 'JB-Digital';
+	src: local('JB-Digital'), url('jb-digital.ttf') format('truetype');
 }
 
 body, html {
@@ -10,10 +9,19 @@ body, html {
 	padding: 0;
 }
 
-.clear { clear:both; font-family: 'DSDIGI'; }
+table.columns {
+	width: 100%;
+	height: 100%;
+}
+
+td.columns {
+	width: 33%;
+}
+
+.clear { clear:both; font-family: 'JB-Digital'; }
 
 #floater {
-	float:left;
+	float: left;
 	height: 50%;
 	width: 100%;
 	min-height: 229px;
@@ -107,7 +115,7 @@ header p {
 	border-right-color: #444;
 	background: #575;
 	margin: 0 auto;
-	font-family: DSDIGI;
+	font-family: JB-Digital;
 	text-align: right;
 	font-size: 58px;
 	padding: 2px;
@@ -262,3 +270,98 @@ float: right;
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+
+font.kbd {
+	padding: 0.1em 0.6em;
+	border: 1px solid #ccc;
+	font-size: 11px;
+	font-family: arial;
+	background-color: #f7f7f7;
+	color: #333;
+	-moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+	-webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+	box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	margin: 0 0.1em;
+	text-shadow: 0 1px 0 #fff;
+	line-height: 1.4;
+	white-space: nowrap;
+}
+
+/* http://cssdeck.com/labs/full/css3-toggle-switch */
+input.switch:empty {
+	margin-left: -999px;
+}
+
+input.switch:empty ~ label {
+	position: relative;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.switch:empty ~ label:before, 
+input.switch:empty ~ label:after {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 16em;
+	content: '';
+	width: 3.6em;
+    height: 1.3em;
+	background-color: #c33;
+	border-radius: 0.3em;
+	box-shadow: inset 0 0.2em 0 rgba(0,0,0,0.3);
+	-webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+}
+
+input.switch:empty ~ label:after {
+	width: 1.4em;
+	top: 0.1em;
+	bottom: 0.1em;
+	margin-left: 0.1em;
+	background-color: #fff;
+	border-radius: 0.25em;
+	box-shadow: inset 0 -0.2em 0 rgba(0,0,0,0.2);
+}
+
+input.switch:checked ~ label:before {
+	background-color: #999;
+}
+
+input.switch:checked ~ label:after {
+	margin-left: 2.1em;
+}
+
+input.switch:checked ~ .hints {
+    visibility: hidden;
+	height: 300px; 
+}
+
+.title {
+	padding-left: 50px;
+	font-family: arial;
+
+}
+
+/* http://stackoverflow.com/questions/5113246/make-div-invisible-in-css-and-javascript */
+.hints {
+	font-family: arial;
+	visibility: visible;
+    background: #FFFFCC !important;
+	margin-left: 30px;
+	padding: 15px 0 30px 30px;
+	height: 300px; 
+	width: 320px;
+	-webkit-transform:rotate(-2deg);
+	-o-transform:rotate(-2deg);
+	-moz-transform:rotate(-2deg);
+	box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+}

@@ -49,8 +49,13 @@ function operator() {
 function calculate(button) {
   queue = document.getElementById('display').innerHTML;
 
-  if(button == "clear") {
+  if(queue == "0" && heap == "") {
     document.getElementById('display').innerHTML = "";
+    queue = "";
+  }
+
+  if(button == "clear") {
+    document.getElementById('display').innerHTML = "0";
     heap = "";
   }
   else if(button == "clearEntry") {

@@ -20,6 +20,35 @@ RK5CYII=
 <script src="keybindings.js" type="text/javascript"></script>
 </head>
 <body>
+
+<table class="columns"><tr>
+<td class="columns">
+<div id="wrapper">
+	<input type="checkbox" id="switch" class="switch" style="display:none" />
+	<label for="switch"><b class="title">Keyboard Shortcuts</b></label><br><br>
+    <div class="hints">
+		<table><tr><td>Numeric keys:</td>
+		<td><font class="kbd">0</font>&nbsp;<font class="kbd">1</font>
+		&nbsp;<font class="kbd">2</font>&nbsp;<font class="kbd">3</font>
+		&nbsp;<font class="kbd">4</font></td></tr>
+		<tr><td></td><td><font class="kbd">5</font>&nbsp;<font class="kbd">6</font>
+		&nbsp;<font class="kbd">7</font>&nbsp;<font class="kbd">8</font>
+		&nbsp;<font class="kbd">9</font></td></tr>
+		<tr><td>Decimal:</td><td><font class="kbd">&#46;</font></td></tr>
+		<tr><td>Equals:</td><td><font class="kbd">&#61;</font>&nbsp;or&nbsp;<font class="kbd">Enter</font></td>
+		<tr><td>Addition:</td><td><font class="kbd">&#43;</font></td></tr>
+		<tr><td>Subtraction:</td><td><font class="kbd">&#45;</font></td></tr>
+		<tr><td>Multiplication:</td><td><font class="kbd">&#42;</font></td></tr>
+		<tr><td>Division:</td><td><font class="kbd">&#47;</font></td></tr>
+		<tr><td>Power (x&#8319;):</td><td><font class="kbd">&#94;</font></td></tr>
+		<tr><td>Delete:</td><td><font class="kbd">Backspace</font></td></tr>
+		<tr><td>Clear:</td><td><font class="kbd">ESC</font></td></tr>
+		<tr><td>Easter egg:</td><td><font class="kbd">~</font></td></tr>
+		</tr></table>
+	</div>
+</div>
+
+</td><td class="columns">
 <div id="floater"></div>
 	<div id="calculator" class="clearfix">
 	<header>
@@ -68,13 +97,20 @@ RK5CYII=
 		<div class="clear"></div>
 	</div>
 </div>
+</td><td class="columns"></td></tr></table>
 
 <script type="text/javascript">
+calculate('clear');
 // Source: http://www.javascriptkit.com/jsref/eventkeyboardmouse.shtml
 onkeypress=function(e) {
 	var e = window.event || e;
 	var keyunicode = e.charCode || e.keyCode;
 	keyboard(keyunicode);
+}
+onkeyup=function(e) {
+	var e = window.event || e;
+	var keyup = e.which || e.charCode || e.keyCode;
+	keypress(keyup);
 }
 </script>
 

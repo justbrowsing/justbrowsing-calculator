@@ -5,6 +5,14 @@ Demo page: http://justbrowsing.github.com/justbrowsing-calculator/
 
 Changelog:
 
+2014-01-05
+* Fixed Chrome keybindings (ESC and Backspace)
+* Clear behaves more like a real calculator
+* Defaults to 0 like a real calculator
+* Added keyboard shortcut hints
+* Added toggle for stickynote hints
+* Changed fontname to fixed font
+
 2013-01-28
 * Added keybindings to calculator
 
