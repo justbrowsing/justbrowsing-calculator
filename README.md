@@ -1,6 +1,6 @@
 Calculator web-app for JustBrowsing
 -----------------------------------
-Demo page: http://justbrowsing.github.com/justbrowsing-calculator/
+Demo page: https://justbrowsinglinux.com/justbrowsing-calculator/
 
 
 Changelog:
